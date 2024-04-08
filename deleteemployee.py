@@ -1,8 +1,16 @@
-def delete_employee(employees_data: list, employees_id: int):
-    for employee in employees_data:
-        if employee['ID']==employees_id:
-            employees_data.remove(employee)
-            print(f"employee having employee ID {employees_id} is deleted successfully")
+def delete_emp(employees):
+   
+    
+    employee_id = input("Enter the ID of the employee to delete: ")
+    
+  
+    for employee in employees:
+        if employee.get('id') == employee_id:
+            employees.remove(employee)
+            print("successfully employee delete")
             return
-        print(f"Employee having employee id{employees_id} is not available" )
 
+    print("Employee with ID '{}' not found.".format(employee_id))
+
+
+delete_emp(employees)
